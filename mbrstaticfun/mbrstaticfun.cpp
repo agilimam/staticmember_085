@@ -24,5 +24,28 @@ void mahasiswa::setID() {
 	id = ++nim;
 }
 
+void mahasiswa::printAll() {
+	cout << "ID = " << id << endl;
+	cout << "Nama = " << nama << endl;
+	cout << endl;
+}
+
+int main() {
+	mahasiswa mhs1("Sri Dadi");
+	mahasiswa mhs2("Budi Jatmiko");
+	mahasiswa::setNim(9); //mengakses melalui static member function"setnim"
+	mahasiswa mhs3("Andi Janu");
+	mahasiswa mhs4("Joko wahono");
+
+	mhs1.printAll();
+	mhs2.printAll();
+	mhs3.printAll();
+	mhs4.printAll();
+
+	cout << "akses dari luar object = " << mahasiswa::getNim() << endl; // mengakses nim melalui static member function "getnim"
+
+	return 0;
+
+}
 
 
